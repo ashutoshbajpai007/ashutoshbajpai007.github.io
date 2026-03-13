@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - js/
+  render:
+    - "*"
+    - "!CLAUDE.md"
+
+execute:
+  freeze: auto
+
+website:
+  title: "Ashutosh Bajpai"
+  site-url: https://YOUR_GITHUB_USERNAME.github.io/blog.html
+  description: "This is Ashutosh Bajpai's personal website"
+  open-graph: true
+  twitter-card:
+    card-style: summary_large_image
+  navbar:
+    right:
+      - text: Blog
+        href: blog.qmd
+      - text: Projects
+        href: projects.qmd
+      - icon: github
+        text: GitHub
+        href: https://github.com/YOUR_GITHUB_USERNAME
+      - icon: twitter
+        text: Twitter
+        href: https://twitter.com/YOUR_TWITTER_HANDLE
+      - icon: envelope
+        href: mailto:your.email@example.com
+      - icon: rss
+        href: blog.xml
+format:
+  html:
+    theme: cosmo
+    css: styles.css

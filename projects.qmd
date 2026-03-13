@@ -1,0 +1,8 @@
+---
+title: "Projects"
+comments: false
+---
+
+- [Conference Recap and Summaries](conferences.qmd) - Conference Recaps and Summaries
+
+[Add your projects here - links to GitHub repositories, personal projects, tools you've built, etc.]
