@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Projects – Ashutosh Bajpai</title>
+<title>agents – Ashutosh Bajpai</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -71,10 +106,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Projects – Ashutosh Bajpai">
+<meta property="og:title" content="Ashutosh Bajpai">
 <meta property="og:description" content="This is Ashutosh Bajpai’s personal website">
 <meta property="og:site_name" content="Ashutosh Bajpai">
-<meta name="twitter:title" content="Projects – Ashutosh Bajpai">
+<meta name="twitter:title" content="Ashutosh Bajpai">
 <meta name="twitter:description" content="This is Ashutosh Bajpai’s personal website">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -101,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="./projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -137,33 +172,67 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Projects</h1>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<section id="agents.md" class="level1">
+<h1>AGENTS.md</h1>
+<p>Guidance for coding agents (Claude Code, Codex, etc.) working in this repository.</p>
+<section id="project" class="level2">
+<h2 class="anchored" data-anchor-id="project">Project</h2>
+<p>Ashutosh Bajpai’s personal blog, built with <a href="https://quarto.org/">Quarto</a>.</p>
+</section>
+<section id="key-commands" class="level2">
+<h2 class="anchored" data-anchor-id="key-commands">Key Commands</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview       <span class="co"># Local dev server with live reload</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render        <span class="co"># Build site → docs/</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync              <span class="co"># Install Python dependencies</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Deployment: push to <code>main</code> → GitHub Actions renders and publishes to <code>gh-pages</code>.</p>
+</section>
+<section id="structure" class="level2">
+<h2 class="anchored" data-anchor-id="structure">Structure</h2>
+<pre class="text"><code>posts/YYYY-MM-DD-slug/index.qmd    # Blog posts
+conferences/YYYY-MM-DD-name/index.qmd  # Conference summaries
+_quarto.yml                         # Main site config
+posts/_metadata.yml                 # Default post settings
+pyproject.toml                      # Python deps (Python 3.13.9)
+docs/                               # Rendered output (commit this)
+_freeze/                            # Computational cache (commit this)</code></pre>
+</section>
+<section id="adding-content" class="level2">
+<h2 class="anchored" data-anchor-id="adding-content">Adding Content</h2>
+<p>Create <code>posts/YYYY-MM-DD-slug/index.qmd</code> with frontmatter:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Post Title"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"Ashutosh Bajpai"</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">'2025-01-01'</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">Technology</span><span class="kw">,</span><span class="at"> Programming</span><span class="kw">]</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Use <code>.qmd</code> files (not <code>.md</code>) for all blog posts and conference summaries.</p>
+</section>
+<section id="conventions" class="level2">
+<h2 class="anchored" data-anchor-id="conventions">Conventions</h2>
 <ul>
-<li><a href="./conferences.html">Conference Recap and Summaries</a> - Conference Recaps and Summaries</li>
+<li><strong>Branches:</strong> <code>main</code> (production), <code>feature/description</code> or <code>claude/description-xxxxx</code></li>
+<li><strong>Commit:</strong> include <code>docs/</code> and <code>_freeze/</code>; exclude <code>.quarto/</code>, <code>_site/</code></li>
+<li><strong>Links:</strong> never use bare URLs — always wrap in <code>&lt;url&gt;</code> or <code>[text](url)</code> form</li>
+<li><strong>Images:</strong> place in post directory, compress PNGs with <code>pngquant --quality 60-80</code></li>
+<li><strong>Code blocks:</strong> executable Python runs via Jupyter during render; use <code>freeze: false</code> to force re-execution</li>
 </ul>
-<p>[Add your projects here - links to GitHub repositories, personal projects, tools you’ve built, etc.]</p>
+</section>
+<section id="troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>Build fails → <code>uv sync</code>, then <code>rm -rf _freeze/ &amp;&amp; quarto render</code></li>
+<li>Preview stale → restart <code>quarto preview</code></li>
+<li>Deployment issues → check Actions tab logs</li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -14,6 +14,55 @@
     "text": "No matching items"
   },
   {
+    "objectID": "AGENTS.html",
+    "href": "AGENTS.html",
+    "title": "AGENTS.md",
+    "section": "",
+    "text": "Guidance for coding agents (Claude Code, Codex, etc.) working in this repository.\n\n\nAshutosh Bajpai’s personal blog, built with Quarto.\n\n\n\nquarto preview       # Local dev server with live reload\nquarto render        # Build site → docs/\nuv sync              # Install Python dependencies\nDeployment: push to main → GitHub Actions renders and publishes to gh-pages.\n\n\n\nposts/YYYY-MM-DD-slug/index.qmd    # Blog posts\nconferences/YYYY-MM-DD-name/index.qmd  # Conference summaries\n_quarto.yml                         # Main site config\nposts/_metadata.yml                 # Default post settings\npyproject.toml                      # Python deps (Python 3.13.9)\ndocs/                               # Rendered output (commit this)\n_freeze/                            # Computational cache (commit this)\n\n\n\nCreate posts/YYYY-MM-DD-slug/index.qmd with frontmatter:\n---\ntitle: \"Post Title\"\nauthor: \"Ashutosh Bajpai\"\ndate: '2025-01-01'\ncategories: [Technology, Programming]\n---\nUse .qmd files (not .md) for all blog posts and conference summaries.\n\n\n\n\nBranches: main (production), feature/description or claude/description-xxxxx\nCommit: include docs/ and _freeze/; exclude .quarto/, _site/\nLinks: never use bare URLs — always wrap in &lt;url&gt; or [text](url) form\nImages: place in post directory, compress PNGs with pngquant --quality 60-80\nCode blocks: executable Python runs via Jupyter during render; use freeze: false to force re-execution\n\n\n\n\n\nBuild fails → uv sync, then rm -rf _freeze/ && quarto render\nPreview stale → restart quarto preview\nDeployment issues → check Actions tab logs"
+  },
+  {
+    "objectID": "AGENTS.html#project",
+    "href": "AGENTS.html#project",
+    "title": "AGENTS.md",
+    "section": "",
+    "text": "Ashutosh Bajpai’s personal blog, built with Quarto."
+  },
+  {
+    "objectID": "AGENTS.html#key-commands",
+    "href": "AGENTS.html#key-commands",
+    "title": "AGENTS.md",
+    "section": "",
+    "text": "quarto preview       # Local dev server with live reload\nquarto render        # Build site → docs/\nuv sync              # Install Python dependencies\nDeployment: push to main → GitHub Actions renders and publishes to gh-pages."
+  },
+  {
+    "objectID": "AGENTS.html#structure",
+    "href": "AGENTS.html#structure",
+    "title": "AGENTS.md",
+    "section": "",
+    "text": "posts/YYYY-MM-DD-slug/index.qmd    # Blog posts\nconferences/YYYY-MM-DD-name/index.qmd  # Conference summaries\n_quarto.yml                         # Main site config\nposts/_metadata.yml                 # Default post settings\npyproject.toml                      # Python deps (Python 3.13.9)\ndocs/                               # Rendered output (commit this)\n_freeze/                            # Computational cache (commit this)"
+  },
+  {
+    "objectID": "AGENTS.html#adding-content",
+    "href": "AGENTS.html#adding-content",
+    "title": "AGENTS.md",
+    "section": "",
+    "text": "Create posts/YYYY-MM-DD-slug/index.qmd with frontmatter:\n---\ntitle: \"Post Title\"\nauthor: \"Ashutosh Bajpai\"\ndate: '2025-01-01'\ncategories: [Technology, Programming]\n---\nUse .qmd files (not .md) for all blog posts and conference summaries."
+  },
+  {
+    "objectID": "AGENTS.html#conventions",
+    "href": "AGENTS.html#conventions",
+    "title": "AGENTS.md",
+    "section": "",
+    "text": "Branches: main (production), feature/description or claude/description-xxxxx\nCommit: include docs/ and _freeze/; exclude .quarto/, _site/\nLinks: never use bare URLs — always wrap in &lt;url&gt; or [text](url) form\nImages: place in post directory, compress PNGs with pngquant --quality 60-80\nCode blocks: executable Python runs via Jupyter during render; use freeze: false to force re-execution"
+  },
+  {
+    "objectID": "AGENTS.html#troubleshooting",
+    "href": "AGENTS.html#troubleshooting",
+    "title": "AGENTS.md",
+    "section": "",
+    "text": "Build fails → uv sync, then rm -rf _freeze/ && quarto render\nPreview stale → restart quarto preview\nDeployment issues → check Actions tab logs"
+  },
+  {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Ashutosh Bajpai",
