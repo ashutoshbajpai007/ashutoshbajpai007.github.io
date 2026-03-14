@@ -8,13 +8,13 @@ about:
   links:
     - icon: envelope
       text: Email
-      href: mailto:your.email@example.com
+      href: mailto:ashutosh.bajpai00007@gmail.com
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME/
+      href: https://www.linkedin.com/in/ashutosh-bajpai-devops/
     - icon: github
       text: GitHub
-      href: https://github.com/YOUR_GITHUB_USERNAME
+      href: https://github.com/ashutoshbajpai007
       target: _blank
     - icon: twitter
       text: Twitter
