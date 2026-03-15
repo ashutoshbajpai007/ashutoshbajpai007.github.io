@@ -12,7 +12,7 @@ execute:
 
 website:
   title: "Ashutosh Bajpai"
-  site-url: https://YOUR_GITHUB_USERNAME.github.io/blog.html
+  site-url: https:/ashutoshbajpai007.github.io/blog.html
   description: "This is Ashutosh Bajpai's personal website"
   open-graph: true
   twitter-card:
@@ -25,12 +25,12 @@ website:
         href: projects.qmd
       - icon: github
         text: GitHub
-        href: https://github.com/YOUR_GITHUB_USERNAME
+        href: https://github.com/ashutoshbajpai007
       - icon: twitter
         text: Twitter
         href: https://twitter.com/YOUR_TWITTER_HANDLE
       - icon: envelope
-        href: mailto:your.email@example.com
+        href: mailto:ashutosh.bajpai00007@gmail.com
       - icon: rss
         href: blog.xml
 format:
