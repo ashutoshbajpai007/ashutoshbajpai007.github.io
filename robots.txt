@@ -1,1 +1,1 @@
-Sitemap: https://YOUR_GITHUB_USERNAME.github.io/blog.html/sitemap.xml
+Sitemap: https:/ashutoshbajpai007.github.io/blog.html/sitemap.xml
