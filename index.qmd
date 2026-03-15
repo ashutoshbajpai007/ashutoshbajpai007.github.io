@@ -24,8 +24,11 @@ about:
 
 ::: {#hero-heading}
 
-## Hello! 👋
+## Hello! 👋, I'm Ashutosh Bajpai
 
+Cloud Engineering Lead / DevOps Architect with 14+ years of experience designing, deploying, and operating enterprise-grade cloud platforms across AWS, Azure, and GCP. Experienced in building Kubernetes-based SaaS platforms, Infrastructure-as-Code using Terraform, Docker containerization, and CI/CD automation for large-scale distributed systems.
+
+Currently exploring and integrating AI into platform engineering, including AI-assisted automation, intelligent monitoring, and developer productivity solutions. Passionate about building scalable, reliable cloud infrastructure and driving platform standardization while maintaining highly available production environments.
 I am Ashutosh Bajpai, a passionate technologist and lifelong learner. I enjoy exploring new technologies, building innovative solutions, and sharing my knowledge with the community through writing and open-source contributions.
 
 ### Professional Experience
